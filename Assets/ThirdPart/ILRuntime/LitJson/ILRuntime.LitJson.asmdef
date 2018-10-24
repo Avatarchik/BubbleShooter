@@ -1,0 +1,10 @@
+{
+    "name": "ILRuntime.LitJson",
+    "references": [
+        "ILRuntime.ILRuntime"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true
+}

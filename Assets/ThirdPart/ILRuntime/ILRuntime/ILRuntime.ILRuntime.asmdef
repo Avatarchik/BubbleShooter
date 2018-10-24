@@ -1,0 +1,11 @@
+{
+    "name": "ILRuntime.ILRuntime",
+    "references": [
+        "ILRuntime.Mono.Cecil.20",
+        "ILRuntime.Mono.Cecil.Pdb"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true
+}

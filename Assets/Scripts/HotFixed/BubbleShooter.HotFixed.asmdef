@@ -1,0 +1,12 @@
+{
+    "name": "BubbleShooter.HotFixed",
+    "references": [
+        "ILRuntime.LitJson",
+        "ILRuntime.ILRuntime",
+        "LimboStudio.Framework"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}
