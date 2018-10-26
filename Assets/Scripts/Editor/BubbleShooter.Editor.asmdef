@@ -1,7 +1,9 @@
 {
     "name": "BubbleShooter.Editor",
     "references": [
-        "LimboStudio.Framework"
+        "LimboStudio.Framework",
+        "BubbleShooter",
+        "LimboStudio.Framework.Editor"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [

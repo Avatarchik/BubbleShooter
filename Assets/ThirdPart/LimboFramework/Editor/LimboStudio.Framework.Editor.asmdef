@@ -1,13 +1,13 @@
 {
-    "name": "BubbleShooter.HotFixed",
+    "name": "LimboStudio.Framework.Editor",
     "references": [
-        "ILRuntime.LitJson",
-        "ILRuntime.ILRuntime",
         "LimboStudio.Framework",
-        "BubbleShooter"
+        "ILRuntime.LitJson"
     ],
     "optionalUnityReferences": [],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false
 }
