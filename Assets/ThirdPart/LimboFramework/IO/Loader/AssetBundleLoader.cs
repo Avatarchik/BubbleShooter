@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace LimboFramework.Loader
+namespace LimboFramework.IO.Loader
 {
     public class AssetBundleLoader : ILoader
     {

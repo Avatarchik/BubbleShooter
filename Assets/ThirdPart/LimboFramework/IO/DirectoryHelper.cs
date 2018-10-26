@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace LimboFramework.Utils
+namespace LimboFramework.IO
 {
     public static class DirectoryHelper
     {

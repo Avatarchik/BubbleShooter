@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace LimboFramework.Loader
+namespace LimboFramework.IO.Loader
 {
     public class QueueLoader : ILoader
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LimboFramework.Utils
+namespace LimboFramework.IO
 {
 	public static class ByteHelper
     {

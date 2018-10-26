@@ -1,6 +1,6 @@
-﻿namespace LimboFramework.AssetBundle
+﻿namespace LimboFramework.IO
 {
-	public class OutputDescriptor
+	public class FileOutputDescriptor
     {
         public string Path { get; set; }
         public string Name { get; set; }

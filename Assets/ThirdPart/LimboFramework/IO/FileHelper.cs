@@ -1,9 +1,6 @@
-﻿using System;
-using System.IO;
-using LimboFramework.AssetBundle;
-using UnityEditor;
+﻿using System.IO;
 
-namespace LimboFramework.Utils
+namespace LimboFramework.IO
 {
     public static class FileHelper
     {

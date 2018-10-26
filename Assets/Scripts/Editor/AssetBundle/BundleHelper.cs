@@ -1,6 +1,6 @@
 ﻿using System.Text;
-using LimboFramework.AssetBundle;
 using LimboFramework.Editor;
+using LimboFramework.IO;
 using LimboFramework.Utils;
 using UnityEditor;
 using UnityEngine;
@@ -25,16 +25,16 @@ namespace Editor.AssetBundle
                 OutputPath = bundleOutputPath
             };
 
-            OutputDescriptor outputDescriptor = new OutputDescriptor
+            FileOutputDescriptor fileOutputDescriptor = new FileOutputDescriptor
             {
                 Path = bundleOutputPath,
                 Name = "resourceInfo.bytes"
             };
 
             AssetBundleManifest manifest = AssetBundleBuilder.BuildAssetBubdle(buildDescriptor);
-            string resourceInfo = AssetBundleBuilder.BuildAssetsManifest(manifest, outputDescriptor);
+            string resourceInfo = AssetBundleBuilder.BuildAssetsManifest(manifest, fileOutputDescriptor);
             byte[] encryptBytes = ByteHelper.DeOrEncrypt(Encoding.UTF8.GetBytes(resourceInfo));
-            FileHelper.WriteBytes(outputDescriptor.Path, outputDescriptor.Name, encryptBytes);
+            FileHelper.WriteBytes(fileOutputDescriptor.Path, fileOutputDescriptor.Name, encryptBytes);
         }
     }
 }

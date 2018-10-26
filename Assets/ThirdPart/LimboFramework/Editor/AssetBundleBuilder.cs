@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using LimboFramework.AssetBundle;
+using LimboFramework.IO;
 using LimboFramework.Utils;
 using LitJson;
 using UnityEditor;
@@ -20,15 +21,15 @@ namespace LimboFramework.Editor
             return BuildPipeline.BuildAssetBundles(outputPath, assetBundleBuildDescriptor.Options, assetBundleBuildDescriptor.Target);
         }
 
-        public static string BuildAssetsManifest(AssetBundleManifest manifest, OutputDescriptor outputDescriptor)
+        public static string BuildAssetsManifest(AssetBundleManifest manifest, FileOutputDescriptor fileOutputDescriptor)
         {
             AssetMainifest assetMainifest = new AssetMainifest();
 
             Dictionary<string, AssetDescriptor> bundleList = new Dictionary<string, AssetDescriptor>();
-            DirectoryInfo directoryInfo = new DirectoryInfo(outputDescriptor.Path);
+            DirectoryInfo directoryInfo = new DirectoryInfo(fileOutputDescriptor.Path);
             foreach (var info in directoryInfo.GetFiles())
             {
-                if (Path.GetExtension(info.Name) == $".{Path.GetExtension(outputDescriptor.Path)}")
+                if (Path.GetExtension(info.Name) == $".{Path.GetExtension(fileOutputDescriptor.Path)}")
                 {
                     AssetDescriptor data = new AssetDescriptor
                     {
