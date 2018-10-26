@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using LimboFramework.AssetBundle;
 using LimboFramework.Utils;
 using LitJson;
@@ -9,9 +8,9 @@ using UnityEngine;
 
 namespace LimboFramework.Editor
 {
-    public class BundleBuilder
+    public class AssetBundleBuilder
     {
-        public static AssetBundleManifest Build(AssetBundleBuildDescriptor assetBundleBuildDescriptor)
+        public static AssetBundleManifest BuildAssetBubdle(AssetBundleBuildDescriptor assetBundleBuildDescriptor)
         {
             string outputPath = assetBundleBuildDescriptor.OutputPath;
 
@@ -21,7 +20,7 @@ namespace LimboFramework.Editor
             return BuildPipeline.BuildAssetBundles(outputPath, assetBundleBuildDescriptor.Options, assetBundleBuildDescriptor.Target);
         }
 
-        public static string BuildManifest(AssetBundleManifest manifest, OutputDescriptor outputDescriptor)
+        public static string BuildAssetsManifest(AssetBundleManifest manifest, OutputDescriptor outputDescriptor)
         {
             AssetMainifest assetMainifest = new AssetMainifest();
 

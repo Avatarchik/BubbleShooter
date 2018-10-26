@@ -31,8 +31,8 @@ namespace Editor.AssetBundle
                 Name = "resourceInfo.bytes"
             };
 
-            AssetBundleManifest manifest = BundleBuilder.Build(buildDescriptor);
-            string resourceInfo = BundleBuilder.BuildManifest(manifest, outputDescriptor);
+            AssetBundleManifest manifest = AssetBundleBuilder.BuildAssetBubdle(buildDescriptor);
+            string resourceInfo = AssetBundleBuilder.BuildAssetsManifest(manifest, outputDescriptor);
             byte[] encryptBytes = ByteHelper.DeOrEncrypt(Encoding.UTF8.GetBytes(resourceInfo));
             FileHelper.WriteBytes(outputDescriptor.Path, outputDescriptor.Name, encryptBytes);
         }

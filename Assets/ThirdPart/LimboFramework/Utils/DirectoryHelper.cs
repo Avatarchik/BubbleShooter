@@ -2,7 +2,7 @@
 
 namespace LimboFramework.Utils
 {
-    public class DirectoryHelper
+    public static class DirectoryHelper
     {
         public static void Delete(string path, bool recursive)
         {

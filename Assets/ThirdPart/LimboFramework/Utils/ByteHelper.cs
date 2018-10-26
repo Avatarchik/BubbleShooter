@@ -2,10 +2,8 @@
 
 namespace LimboFramework.Utils
 {
-	public class ByteHelper
+	public static class ByteHelper
     {
-        public const int GapLength = 4096;
-
         private const int HandleBytesLength = 1024;
         private static readonly byte[] Key = { 9, 6, 4, 1, 7 };
 

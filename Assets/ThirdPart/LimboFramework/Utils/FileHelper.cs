@@ -5,7 +5,7 @@ using UnityEditor;
 
 namespace LimboFramework.Utils
 {
-    public class FileHelper
+    public static class FileHelper
     {
         public static void WriteBytes(string outputPath, string name, byte[] bytes)
         {
