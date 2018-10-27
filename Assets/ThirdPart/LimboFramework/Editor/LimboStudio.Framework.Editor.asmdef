@@ -2,7 +2,7 @@
     "name": "LimboStudio.Framework.Editor",
     "references": [
         "LimboStudio.Framework",
-        "ILRuntime.LitJson"
+        "ILRuntime"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [

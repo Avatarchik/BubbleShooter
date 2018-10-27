@@ -1,8 +1,0 @@
-{
-    "name": "ILRuntime.Mono.Cecil.20",
-    "references": [],
-    "optionalUnityReferences": [],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false
-}

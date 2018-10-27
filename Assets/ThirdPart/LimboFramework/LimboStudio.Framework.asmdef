@@ -1,6 +1,8 @@
 {
     "name": "LimboStudio.Framework",
-    "references": [],
+    "references": [
+        "ILRuntime"
+    ],
     "optionalUnityReferences": [],
     "includePlatforms": [],
     "excludePlatforms": [],

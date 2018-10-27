@@ -1,7 +1,6 @@
 ﻿using System.Text;
 using LimboFramework.Editor;
 using LimboFramework.IO;
-using LimboFramework.Utils;
 using UnityEditor;
 using UnityEngine;
 
@@ -15,13 +14,13 @@ namespace Editor.AssetBundle
         [MenuItem("Test/Bundle/PC")]
         public static void BuildBundleForWindows()
         {
-            string bundleOutputPath = $"{Application.dataPath}/../AssetBundles/{BuildTarget.StandaloneWindows.ToString()}";
+            string bundleOutputPath = $"{Application.dataPath}/../AssetBundles/{BuildTarget.StandaloneOSX.ToString()}";
 
             AssetBundleBuildDescriptor buildDescriptor = new AssetBundleBuildDescriptor
             {
                 Group = BuildTargetGroup.Standalone,
                 Options = BuildAssetBundleOptions.ChunkBasedCompression,
-                Target = BuildTarget.StandaloneWindows,
+                Target = BuildTarget.StandaloneOSX,
                 OutputPath = bundleOutputPath
             };
 
