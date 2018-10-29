@@ -1,13 +1,14 @@
 ﻿using System;
 using UnityEngine;
+using LimboFramework.IO.Loader;
 
-namespace LimboFramework.IO.Loader
+namespace LimboFramework.AssetBundles
 {
     public class AssetBundleLoader : ILoader
     {
         private readonly string _assetName;
         private readonly int _hashCode;
-        private WWW _donwloader;
+        private AssetBundleCreateRequest _assetBundleRequest;
         private UnityEngine.AssetBundle _loadedBundleAsset;
 
         public event Action<float> OnProgress;
@@ -38,40 +39,30 @@ namespace LimboFramework.IO.Loader
 
         public void Start()
         {
-            string url = _assetName.Contains("://") ? _assetName : $"file:///{_assetName}";
-            _donwloader = WWW.LoadFromCacheOrDownload(url, _hashCode);
+            _assetBundleRequest = AssetBundle.LoadFromFileAsync(_assetName);
         }
 
         public void Update()
         {
-            if (null == _donwloader)
+            if (null == _assetBundleRequest)
             {
                 return;
             }
 
-            if (!string.IsNullOrEmpty(_donwloader.error))
+            if (_assetBundleRequest.isDone)
             {
-                Stop();
-                OnError?.Invoke(this);
-                return;
-            }
-
-            if (_donwloader.isDone)
-            {
-                _loadedBundleAsset = _donwloader.assetBundle;
+                _loadedBundleAsset = _assetBundleRequest.assetBundle;
                 OnComplete?.Invoke(this);
                 Stop();
+                return;
             }
-            else
-            {
-                OnProgress?.Invoke(_donwloader.progress);
-            }
+
+            OnProgress?.Invoke(_assetBundleRequest.progress);
         }
 
         public void Stop()
         {
-            _donwloader?.Dispose();
-            _donwloader = null;
+            _assetBundleRequest = null;
         }
     }
 }

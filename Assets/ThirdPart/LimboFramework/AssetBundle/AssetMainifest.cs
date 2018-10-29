@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace LimboFramework.AssetBundle
+namespace LimboFramework.AssetBundles
 {
     public class AssetMainifest
     {

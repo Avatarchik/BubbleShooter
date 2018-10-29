@@ -1,4 +1,4 @@
-﻿namespace LimboFramework.AssetBundle
+﻿namespace LimboFramework.AssetBundles
 {
 	public class AssetDescriptor
     {
