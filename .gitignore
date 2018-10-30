@@ -4,3 +4,5 @@ obj
 /*.sln
 /*.csproj
 Temp
+AssetBundles
+/LimboStudio.Framework.csproj.user
