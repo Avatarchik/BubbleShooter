@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace LimboFramework.Editor
 {
-    public class AssetBundleBuilder
+    public static class AssetBundleBuilder
     {
         public static AssetBundleManifest BuildAssetBubdle(AssetBundleBuildDescriptor assetBundleBuildDescriptor)
         {
@@ -22,7 +22,7 @@ namespace LimboFramework.Editor
 
         public static string BuildAssetsManifest(AssetBundleManifest manifest, FileOutputDescriptor fileOutputDescriptor)
         {
-            AssetMainifest assetMainifest = new AssetMainifest();
+            AssetVersionMainifest assetMainifest = new AssetVersionMainifest ();
 
             Dictionary<string, AssetDescriptor> bundleList = new Dictionary<string, AssetDescriptor>();
             DirectoryInfo directoryInfo = new DirectoryInfo(fileOutputDescriptor.Path);

@@ -2,7 +2,7 @@
 
 namespace LimboFramework.AssetBundles
 {
-    public class AssetMainifest
+    public class AssetVersionMainifest
     {
         public string Version { get; set; }
         public List<AssetDescriptor> AssetList { get; } = new List<AssetDescriptor>();
