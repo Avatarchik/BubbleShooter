@@ -1,11 +1,13 @@
 {
-    "name": "BubbleShooter",
+    "name": "Test",
     "references": [
         "LimboStudio.Framework",
         "LitJson"
     ],
-    "optionalUnityReferences": [],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": false
+    "allowUnsafeCode": true
 }

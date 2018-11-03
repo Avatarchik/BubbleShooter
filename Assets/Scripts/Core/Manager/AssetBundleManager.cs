@@ -8,7 +8,7 @@ public class AssetBundleManager : MonoBehaviour
 
     private void Start()
     {
-        _loader = new AssetBundleLoader($"{Application.dataPath}/../AssetBundles/StandaloneOSXUniversal/test.unity3d");
+        _loader = new AssetBundleLoader($"{Application.dataPath}/../AssetBundles/StandaloneWindows/test.unity3d");
 
         _loader.OnComplete += OnComplete;
         _loader.Start();
@@ -16,10 +16,7 @@ public class AssetBundleManager : MonoBehaviour
 
     private void Update()
     {
-        if (null != _loader)
-        {
-            _loader.Update();
-        }
+        _loader?.Update();
     }
 
     private void OnComplete(ILoader loader)

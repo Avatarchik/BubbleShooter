@@ -1,6 +1,6 @@
 ﻿namespace LimboFramework.Bundle
 {
-	public class AssetDescriptor
+	public sealed class AssetDescriptor
     {
         public int HashCode { get; set; }
         public string Name { get; set; }

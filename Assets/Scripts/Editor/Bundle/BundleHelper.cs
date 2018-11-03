@@ -26,7 +26,7 @@ namespace Editor.Bundle
 
         private static void Build(BuildTargetGroup group, BuildTarget target)
         {
-            string bundleOutputPath = $"{StringConst.AssetBundlePath}{target.ToString()}";
+            string bundleOutputPath = $"{BaseStringConst.AssetBundlePath}{target.ToString()}";
 
             AssetBundleBuildDescriptor buildDescriptor = new AssetBundleBuildDescriptor
             {
@@ -39,7 +39,7 @@ namespace Editor.Bundle
             FileDescriptor fileDescriptor = new FileDescriptor
             {
                 Path = bundleOutputPath,
-                Name = StringConst.ResourceManifestFileName
+                Name = BaseStringConst.ResourceManifestFileName
             };
 
             AssetBundleManifest manifest = AssetBundleBuilder.BuildAssetBubdle(buildDescriptor);
