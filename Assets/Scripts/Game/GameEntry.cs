@@ -10,7 +10,7 @@ namespace Game
         {
             await VersionManager.Instance.Init();
 
-            bool needForceUpdate = VersionManager.Instance.NeedForceUpdate();
+            bool needForceUpdate = VersionManager.Instance.NeedUpdatePackage();
             if (needForceUpdate)
             {
                 //TODO 强制更新

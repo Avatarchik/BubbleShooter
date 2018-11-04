@@ -6,6 +6,6 @@ namespace Const
     {
         public static readonly string ResourceManifestFileName = "resourceInfo.bytes";
         public static readonly string AssetBundlePath = $"{Application.dataPath}/../AssetBundles/";
-        public static readonly string VersionInfoFileName = $"{Application.streamingAssetsPath}/VersionInfo.json";
+        public static readonly string VersionInfoFileName = $"file://{Application.streamingAssetsPath}/VersionInfo.json";
     }
 }

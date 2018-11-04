@@ -32,7 +32,7 @@ namespace Core.Manager
             _remoteConfigDescriptor = JsonMapper.ToObject<RemoteConfigDescriptor>(handler.text);
         }
 
-        public bool NeedForceUpdate()
+        public bool NeedUpdatePackage()
         {
             return !string.Equals(_versionDescriptor.GameVersion, _remoteConfigDescriptor.GameVersion);
         }
