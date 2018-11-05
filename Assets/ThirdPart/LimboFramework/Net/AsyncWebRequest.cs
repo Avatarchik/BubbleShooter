@@ -4,7 +4,7 @@ using UnityEngine.Networking;
 
 namespace LimboFramework.Net
 {
-    public static class WebRequest
+    public static class AsyncWebRequest
     {
         public static async Task Load(string url, Action<DownloadHandler> completeAction)
         {

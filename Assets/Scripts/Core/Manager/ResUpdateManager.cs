@@ -6,15 +6,10 @@ namespace Core.Manager
 {
     public class ResUpdateManager : Singleton<ResUpdateManager>
     {
-        public async Task Start()
+        public async Task<bool> Start()
         {
-            bool needUpdate = VersionManager.Instance.NeedUpdateResource();
-            if (!needUpdate)
-            {
-                return;
-            }
-
-
+            return false;
         }
+
     }
 }

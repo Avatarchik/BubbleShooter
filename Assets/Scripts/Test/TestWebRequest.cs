@@ -9,8 +9,8 @@ namespace Assets.Scripts.Test
     {
         async void Start()
         {
-            await LimboFramework.Net.WebRequest.Load("http://limbostudio.bj.bcebos.com/bubble/GameConfig.json", Callback);
-            await LimboFramework.Net.WebRequest.Load($"{Application.streamingAssetsPath}/VersionInfo.json", Callback);
+            await LimboFramework.Net.AsyncWebRequest.Load("http://limbostudio.bj.bcebos.com/bubble/GameConfig.json", Callback);
+            await LimboFramework.Net.AsyncWebRequest.Load($"{Application.streamingAssetsPath}/VersionInfo.json", Callback);
         }
 
         private void Callback(DownloadHandler obj)

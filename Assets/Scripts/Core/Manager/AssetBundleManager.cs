@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using LimboFramework.IO.Loader;
+using LimboFramework.Loader;
 
 
 public class AssetBundleManager : MonoBehaviour

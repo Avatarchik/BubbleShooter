@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using Core.Manager;
+﻿using Core.Manager;
 using UnityEngine;
 
 namespace Game
@@ -14,7 +13,6 @@ namespace Game
             if (needForceUpdate)
             {
                 //TODO 强制更新
-                Debug.Log(VersionManager.Instance.ForceUpdateUrl);
                 return;
             }
 

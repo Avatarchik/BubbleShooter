@@ -8,6 +8,7 @@ namespace Core.Descriptor
         public List<ServerDescriptor> ResServres { get; set; }
         public string GameVersion { get; set; }
         public string ResVersion { get; set; }
+        public string Platform { get; set; }
         public string ForceUpdateServer { get; set; }
     }
 }

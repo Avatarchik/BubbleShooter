@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LimboFramework.IO.Loader
+namespace LimboFramework.Loader
 {
     public interface ILoader
     {

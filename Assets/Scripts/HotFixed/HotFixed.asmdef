@@ -1,10 +1,12 @@
 {
-    "name": "BubbleShooter.HotFixed",
+    "name": "HotFixed",
     "references": [
         "LimboStudio.Framework",
         "BubbleShooter"
     ],
-    "optionalUnityReferences": [],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false
