@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using UnityEngine;
 using UnityEngine.Networking;
 
 namespace LimboFramework.Net
@@ -14,7 +15,9 @@ namespace LimboFramework.Net
 
                 if (www.isNetworkError || www.isHttpError)
                 {
-                    throw new Exception($"{www.error}==>{url}");
+                    Debug.LogError($"Load error {url}");
+                    completeAction?.Invoke(null);
+                    return;
                 }
 
                 completeAction?.Invoke(www.downloadHandler);

@@ -1,4 +1,5 @@
 ﻿using Core.Manager;
+using LimboFramework.Version;
 using UnityEngine;
 
 namespace Game
@@ -8,13 +9,14 @@ namespace Game
         async void Start()
         {
             await VersionManager.Instance.Init();
+            //GameConfig.Instance.Log();
 
-            bool needForceUpdate = VersionManager.Instance.NeedUpdatePackage();
-            if (needForceUpdate)
-            {
-                //TODO 强制更新
-                return;
-            }
+            //bool needForceUpdate = VersionManager.Instance.NeedUpdatePackage();
+            //if (needForceUpdate)
+            //{
+            //    //TODO 强制更新
+            //    return;
+            //}
 
             await ResUpdateManager.Instance.Start();
         }

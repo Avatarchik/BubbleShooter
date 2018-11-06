@@ -1,31 +1,23 @@
 ﻿using System.Threading.Tasks;
-using Const;
-using Core.Descriptor;
-using Game.Utils;
 using LimboFramework.Net;
 using LimboFramework.Singleton;
 using LimboFramework.Utils;
 using LitJson;
+using UnityEngine;
 using UnityEngine.Networking;
 
-namespace Core.Manager
+namespace LimboFramework.Version
 {
     public class VersionManager : Singleton<VersionManager>
     {
-        private VersionDescriptor _versionDescriptor;
         private RemoteConfigDescriptor _remoteConfigDescriptor;
 
         public string ForceUpdateUrl => _remoteConfigDescriptor.ForceUpdateServer;
 
         public async Task Init()
         {
-            await AsyncWebRequest.Load(PathHelper.GetLocalVersionFilePath(), InitLocalConfig);
-            await AsyncWebRequest.Load(_versionDescriptor.ConfigUrl, InitRemoteConfig);
-        }
-
-        private void InitLocalConfig(DownloadHandler handler)
-        {
-            _versionDescriptor = JsonMapper.ToObject<VersionDescriptor>(handler.text);
+            string path = $"{GameConfig.Instance.RemoteSettingUrl}/{PlatformHelper.GetPlatformString()}/GameConfig.json";
+            await AsyncWebRequest.Load(path, InitRemoteConfig);
         }
 
         private void InitRemoteConfig(DownloadHandler handler)
@@ -35,7 +27,7 @@ namespace Core.Manager
 
         public bool NeedUpdatePackage()
         {
-            return !string.Equals(_versionDescriptor.GameVersion, _remoteConfigDescriptor.GameVersion);
+            return !string.Equals(Application.version, _remoteConfigDescriptor.GameVersion);
         }
     }
 }

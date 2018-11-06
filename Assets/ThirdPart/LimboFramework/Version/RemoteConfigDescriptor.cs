@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Core.Descriptor
+namespace LimboFramework.Version
 {
     public sealed class RemoteConfigDescriptor
     {

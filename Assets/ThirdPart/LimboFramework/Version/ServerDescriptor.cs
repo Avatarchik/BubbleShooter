@@ -1,4 +1,4 @@
-﻿namespace Core.Descriptor
+﻿namespace LimboFramework.Version
 {
     public sealed class ServerDescriptor
     {

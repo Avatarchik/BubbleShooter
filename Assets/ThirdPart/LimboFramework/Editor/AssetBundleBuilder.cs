@@ -64,10 +64,10 @@ namespace LimboFramework.Editor
                 Name = ResourceManifestFileName
             };
 
-            AssetBundleManifest manifest = AssetBundleBuilder.BuildAssetBubdle(buildDescriptor);
-            string resourceInfo = AssetBundleBuilder.BuildAssetsManifest(manifest, fileDescriptor);
-            byte[] encryptBytes = ByteHelper.DeOrEncrypt(Encoding.UTF8.GetBytes(resourceInfo));
-            FileHelper.WriteBytes(fileDescriptor.Path, fileDescriptor.Name, encryptBytes);
+            AssetBundleManifest manifest = BuildAssetBubdle(buildDescriptor);
+            string resourceInfo = BuildAssetsManifest(manifest, fileDescriptor);
+            Debug.Log(resourceInfo);
+            FileHelper.WriteBytes(fileDescriptor.Path, fileDescriptor.Name, Encoding.UTF8.GetBytes(resourceInfo));
         }
 
         private static AssetBundleManifest BuildAssetBubdle(AssetBundleBuildDescriptor assetBundleBuildDescriptor)
@@ -83,12 +83,13 @@ namespace LimboFramework.Editor
         private static string BuildAssetsManifest(AssetBundleManifest manifest, FileDescriptor fileDescriptor)
         {
             AssetVersionMainifest assetMainifest = new AssetVersionMainifest ();
+            assetMainifest.Version = "1.0.0";
 
             Dictionary<string, AssetDescriptor> bundleList = new Dictionary<string, AssetDescriptor>();
             DirectoryInfo directoryInfo = new DirectoryInfo(fileDescriptor.Path);
             foreach (var info in directoryInfo.GetFiles())
             {
-                if (Path.GetExtension(info.Name) == $".{Path.GetExtension(fileDescriptor.Path)}")
+                if (Path.GetExtension(info.Name) == ".assetbundle")
                 {
                     AssetDescriptor data = new AssetDescriptor
                     {

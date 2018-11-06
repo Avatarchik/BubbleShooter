@@ -2,6 +2,7 @@
 using System.IO;
 using System.Text;
 using LimboFramework.Utils;
+using LimboFramework.Version;
 using LitJson;
 using UnityEditor;
 using UnityEngine;
@@ -55,6 +56,8 @@ namespace LimboFramework.Editor
             PlayerSettings.applicationIdentifier = publishDescriptor.BundleIdentifer;
             PlayerSettings.iOS.buildNumber = publishDescriptor.BuildVersionCode.ToString();
             PlayerSettings.Android.bundleVersionCode = publishDescriptor.BuildVersionCode;
+
+            GameConfig.Instance.RemoteSettingUrl = publishDescriptor.RemoteSettingUrl;
         }
     }
 }

@@ -1,8 +1,8 @@
 {
     "name": "BubbleShooter",
     "references": [
-        "LimboStudio.Framework",
-        "LitJson"
+        "LitJson",
+        "LimboStudio.Framework"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],
