@@ -58,6 +58,7 @@ namespace LimboFramework.Editor
             PlayerSettings.Android.bundleVersionCode = publishDescriptor.BuildVersionCode;
 
             GameConfig.Instance.RemoteSettingUrl = publishDescriptor.RemoteSettingUrl;
+            GameConfig.Instance.Save();
         }
     }
 }
