@@ -8,10 +8,9 @@
 
 //    private void Start()
 //    {
-//        _loader = new AssetBundleLoader($"{Application.dataPath}/../AssetBundles/StandaloneWindows/test.assetbundle");
+//        _loader = new AssetBundleLoader($"{Application.dataPath}/../AssetBundles/StandaloneWindows/test.unity3d");
 
 //        _loader.OnComplete += OnComplete;
-//        _loader.OnProgress += pro => { Debug.Log(pro); };
 //        _loader.Start();
 //    }
 
@@ -25,12 +24,7 @@
 //        _loader = null;
 //        AssetBundle bundle = loader.LoadedData as AssetBundle;
 //        GameObject go = bundle.LoadAsset<GameObject>("Test");
-//        //Instantiate(go);
+//        Instantiate(go);
 //        Debug.Log("  sssssssss  ");
-//    }
-
-//    private async void Ins(GameObject go)
-//    {
-//        await Instantiate(go);
 //    }
 //}
