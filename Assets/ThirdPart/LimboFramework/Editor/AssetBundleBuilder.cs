@@ -82,7 +82,8 @@ namespace LimboFramework.Editor
 
         private static string BuildAssetsManifest(AssetBundleManifest manifest, FileDescriptor fileDescriptor)
         {
-            AssetMainifest assetMainifest = new AssetMainifest { Version = "1.0.0" };
+            AssetVersionMainifest assetMainifest = new AssetVersionMainifest ();
+            assetMainifest.Version = "1.0.0";
 
             Dictionary<string, AssetDescriptor> bundleList = new Dictionary<string, AssetDescriptor>();
             DirectoryInfo directoryInfo = new DirectoryInfo(fileDescriptor.Path);

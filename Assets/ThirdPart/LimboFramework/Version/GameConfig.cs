@@ -21,6 +21,7 @@ namespace LimboFramework.Version
                     {
                         _instance = CreateInstance<GameConfig>();
                         UnityEditor.AssetDatabase.CreateAsset(_instance, ConfigPath);
+                        UnityEditor.AssetDatabase.SaveAssets();
                     }
 #endif
                 }
@@ -28,13 +29,5 @@ namespace LimboFramework.Version
                 return _instance;
             }
         }
-
-#if UNITY_EDITOR
-        public void Save()
-        {
-            UnityEditor.EditorUtility.SetDirty(_instance);
-            UnityEditor.AssetDatabase.SaveAssets();
-        }
-#endif
     }
 }
